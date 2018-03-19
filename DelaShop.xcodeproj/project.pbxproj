@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19F920605F2700EF3E8D /* AppDelegate.swift */; };
+		AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19FB20605F2700EF3E8D /* ViewController.swift */; };
+		AFFF19FF20605F2700EF3E8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFF19FD20605F2700EF3E8D /* Main.storyboard */; };
+		AFFF1A0120605F2700EF3E8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFF1A0020605F2700EF3E8D /* Assets.xcassets */; };
+		AFFF1A0420605F2700EF3E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */; };
+		AFFF1A0F20605F2700EF3E8D /* DelaShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A0E20605F2700EF3E8D /* DelaShopTests.swift */; };
+		AFFF1A1A20605F2700EF3E8D /* DelaShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A1920605F2700EF3E8D /* DelaShopUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFFF1A0B20605F2700EF3E8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFFF19EE20605F2700EF3E8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFFF19F520605F2700EF3E8D;
+			remoteInfo = DelaShop;
+		};
+		AFFF1A1620605F2700EF3E8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFFF19EE20605F2700EF3E8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFFF19F520605F2700EF3E8D;
+			remoteInfo = DelaShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFFF19F620605F2700EF3E8D /* DelaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFF19F920605F2700EF3E8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFFF19FB20605F2700EF3E8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFFF19FE20605F2700EF3E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFFF1A0020605F2700EF3E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFFF1A0320605F2700EF3E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFFF1A0520605F2700EF3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFFF1A0A20605F2700EF3E8D /* DelaShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelaShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFF1A0E20605F2700EF3E8D /* DelaShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelaShopTests.swift; sourceTree = "<group>"; };
+		AFFF1A1020605F2700EF3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFFF1A1520605F2700EF3E8D /* DelaShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelaShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFF1A1920605F2700EF3E8D /* DelaShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelaShopUITests.swift; sourceTree = "<group>"; };
+		AFFF1A1B20605F2700EF3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFFF19F320605F2700EF3E8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFF1A0720605F2700EF3E8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFF1A1220605F2700EF3E8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFFF19ED20605F2700EF3E8D = {
+			isa = PBXGroup;
+			children = (
+				AFFF19F820605F2700EF3E8D /* DelaShop */,
+				AFFF1A0D20605F2700EF3E8D /* DelaShopTests */,
+				AFFF1A1820605F2700EF3E8D /* DelaShopUITests */,
+				AFFF19F720605F2700EF3E8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFFF19F720605F2700EF3E8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF19F620605F2700EF3E8D /* DelaShop.app */,
+				AFFF1A0A20605F2700EF3E8D /* DelaShopTests.xctest */,
+				AFFF1A1520605F2700EF3E8D /* DelaShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFFF19F820605F2700EF3E8D /* DelaShop */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF19F920605F2700EF3E8D /* AppDelegate.swift */,
+				AFFF19FB20605F2700EF3E8D /* ViewController.swift */,
+				AFFF19FD20605F2700EF3E8D /* Main.storyboard */,
+				AFFF1A0020605F2700EF3E8D /* Assets.xcassets */,
+				AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */,
+				AFFF1A0520605F2700EF3E8D /* Info.plist */,
+			);
+			path = DelaShop;
+			sourceTree = "<group>";
+		};
+		AFFF1A0D20605F2700EF3E8D /* DelaShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF1A0E20605F2700EF3E8D /* DelaShopTests.swift */,
+				AFFF1A1020605F2700EF3E8D /* Info.plist */,
+			);
+			path = DelaShopTests;
+			sourceTree = "<group>";
+		};
+		AFFF1A1820605F2700EF3E8D /* DelaShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF1A1920605F2700EF3E8D /* DelaShopUITests.swift */,
+				AFFF1A1B20605F2700EF3E8D /* Info.plist */,
+			);
+			path = DelaShopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFFF19F520605F2700EF3E8D /* DelaShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFFF1A1E20605F2700EF3E8D /* Build configuration list for PBXNativeTarget "DelaShop" */;
+			buildPhases = (
+				AFFF19F220605F2700EF3E8D /* Sources */,
+				AFFF19F320605F2700EF3E8D /* Frameworks */,
+				AFFF19F420605F2700EF3E8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DelaShop;
+			productName = DelaShop;
+			productReference = AFFF19F620605F2700EF3E8D /* DelaShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFFF1A0920605F2700EF3E8D /* DelaShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFFF1A2120605F2700EF3E8D /* Build configuration list for PBXNativeTarget "DelaShopTests" */;
+			buildPhases = (
+				AFFF1A0620605F2700EF3E8D /* Sources */,
+				AFFF1A0720605F2700EF3E8D /* Frameworks */,
+				AFFF1A0820605F2700EF3E8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFFF1A0C20605F2700EF3E8D /* PBXTargetDependency */,
+			);
+			name = DelaShopTests;
+			productName = DelaShopTests;
+			productReference = AFFF1A0A20605F2700EF3E8D /* DelaShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFFF1A1420605F2700EF3E8D /* DelaShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFFF1A2420605F2700EF3E8D /* Build configuration list for PBXNativeTarget "DelaShopUITests" */;
+			buildPhases = (
+				AFFF1A1120605F2700EF3E8D /* Sources */,
+				AFFF1A1220605F2700EF3E8D /* Frameworks */,
+				AFFF1A1320605F2700EF3E8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFFF1A1720605F2700EF3E8D /* PBXTargetDependency */,
+			);
+			name = DelaShopUITests;
+			productName = DelaShopUITests;
+			productReference = AFFF1A1520605F2700EF3E8D /* DelaShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFFF19EE20605F2700EF3E8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Juan M Mariscal";
+				TargetAttributes = {
+					AFFF19F520605F2700EF3E8D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AFFF1A0920605F2700EF3E8D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AFFF19F520605F2700EF3E8D;
+					};
+					AFFF1A1420605F2700EF3E8D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AFFF19F520605F2700EF3E8D;
+					};
+				};
+			};
+			buildConfigurationList = AFFF19F120605F2700EF3E8D /* Build configuration list for PBXProject "DelaShop" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFFF19ED20605F2700EF3E8D;
+			productRefGroup = AFFF19F720605F2700EF3E8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFFF19F520605F2700EF3E8D /* DelaShop */,
+				AFFF1A0920605F2700EF3E8D /* DelaShopTests */,
+				AFFF1A1420605F2700EF3E8D /* DelaShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFFF19F420605F2700EF3E8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFF1A0420605F2700EF3E8D /* LaunchScreen.storyboard in Resources */,
+				AFFF1A0120605F2700EF3E8D /* Assets.xcassets in Resources */,
+				AFFF19FF20605F2700EF3E8D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFF1A0820605F2700EF3E8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFF1A1320605F2700EF3E8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFFF19F220605F2700EF3E8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */,
+				AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFF1A0620605F2700EF3E8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFF1A0F20605F2700EF3E8D /* DelaShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFF1A1120605F2700EF3E8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFF1A1A20605F2700EF3E8D /* DelaShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFFF1A0C20605F2700EF3E8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFFF19F520605F2700EF3E8D /* DelaShop */;
+			targetProxy = AFFF1A0B20605F2700EF3E8D /* PBXContainerItemProxy */;
+		};
+		AFFF1A1720605F2700EF3E8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFFF19F520605F2700EF3E8D /* DelaShop */;
+			targetProxy = AFFF1A1620605F2700EF3E8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFFF19FD20605F2700EF3E8D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFFF19FE20605F2700EF3E8D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFFF1A0320605F2700EF3E8D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFFF1A1C20605F2700EF3E8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFFF1A1D20605F2700EF3E8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFFF1A1F20605F2700EF3E8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = DelaShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.DelaShop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFFF1A2020605F2700EF3E8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = DelaShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.DelaShop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AFFF1A2220605F2700EF3E8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = DelaShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.DelaShopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DelaShop.app/DelaShop";
+			};
+			name = Debug;
+		};
+		AFFF1A2320605F2700EF3E8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = DelaShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.DelaShopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DelaShop.app/DelaShop";
+			};
+			name = Release;
+		};
+		AFFF1A2520605F2700EF3E8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = DelaShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.DelaShopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DelaShop;
+			};
+			name = Debug;
+		};
+		AFFF1A2620605F2700EF3E8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = DelaShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.DelaShopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DelaShop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFFF19F120605F2700EF3E8D /* Build configuration list for PBXProject "DelaShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFFF1A1C20605F2700EF3E8D /* Debug */,
+				AFFF1A1D20605F2700EF3E8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFFF1A1E20605F2700EF3E8D /* Build configuration list for PBXNativeTarget "DelaShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFFF1A1F20605F2700EF3E8D /* Debug */,
+				AFFF1A2020605F2700EF3E8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFFF1A2120605F2700EF3E8D /* Build configuration list for PBXNativeTarget "DelaShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFFF1A2220605F2700EF3E8D /* Debug */,
+				AFFF1A2320605F2700EF3E8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFFF1A2420605F2700EF3E8D /* Build configuration list for PBXNativeTarget "DelaShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFFF1A2520605F2700EF3E8D /* Debug */,
+				AFFF1A2620605F2700EF3E8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFFF19EE20605F2700EF3E8D /* Project object */;
+}
