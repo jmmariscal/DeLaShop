@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF53A2BF20A11D3800CFBBE3 /* SocialNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */; };
+		AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */; };
+		AFDF507321C47C5F000275FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF507221C47C5F000275FD /* Constants.swift */; };
 		AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19F920605F2700EF3E8D /* AppDelegate.swift */; };
 		AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19FB20605F2700EF3E8D /* ViewController.swift */; };
 		AFFF19FF20605F2700EF3E8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFF19FD20605F2700EF3E8D /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		AFFF1A0420605F2700EF3E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */; };
 		AFFF1A0F20605F2700EF3E8D /* DelaShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A0E20605F2700EF3E8D /* DelaShopTests.swift */; };
 		AFFF1A1A20605F2700EF3E8D /* DelaShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A1920605F2700EF3E8D /* DelaShopUITests.swift */; };
+		AFFF1A2920605F6100EF3E8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A2820605F6100EF3E8D /* MainTabBarController.swift */; };
+		AFFF1A2B20605F7D00EF3E8D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A2A20605F7D00EF3E8D /* WebViewController.swift */; };
+		AFFF1A2D20605F9C00EF3E8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF1A2C20605F9C00EF3E8D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetViewController.swift; sourceTree = "<group>"; };
+		AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		AFDF507221C47C5F000275FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFFF19F620605F2700EF3E8D /* DelaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF19F920605F2700EF3E8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFFF19FB20605F2700EF3E8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		AFFF1A1520605F2700EF3E8D /* DelaShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelaShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF1A1920605F2700EF3E8D /* DelaShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelaShopUITests.swift; sourceTree = "<group>"; };
 		AFFF1A1B20605F2700EF3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFFF1A2820605F6100EF3E8D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		AFFF1A2A20605F7D00EF3E8D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		AFFF1A2C20605F9C00EF3E8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFC776372069F1C500023DB2 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		AFC776382069F1CC00023DB2 /* Social Networks */ = {
+			isa = PBXGroup;
+			children = (
+				AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */,
+			);
+			path = "Social Networks";
+			sourceTree = "<group>";
+		};
+		AFC776392069F1DC00023DB2 /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF1A2A20605F7D00EF3E8D /* WebViewController.swift */,
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
 		AFFF19ED20605F2700EF3E8D = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +133,18 @@
 		AFFF19F820605F2700EF3E8D /* DelaShop */ = {
 			isa = PBXGroup;
 			children = (
+				AFC776392069F1DC00023DB2 /* Appointments */,
+				AFC776382069F1CC00023DB2 /* Social Networks */,
+				AFC776372069F1C500023DB2 /* Gallery */,
+				AFFF1A2720605F4700EF3E8D /* Utils */,
+				AFFF1A2820605F6100EF3E8D /* MainTabBarController.swift */,
 				AFFF19F920605F2700EF3E8D /* AppDelegate.swift */,
 				AFFF19FB20605F2700EF3E8D /* ViewController.swift */,
 				AFFF19FD20605F2700EF3E8D /* Main.storyboard */,
 				AFFF1A0020605F2700EF3E8D /* Assets.xcassets */,
 				AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */,
 				AFFF1A0520605F2700EF3E8D /* Info.plist */,
+				AFDF507221C47C5F000275FD /* Constants.swift */,
 			);
 			path = DelaShop;
 			sourceTree = "<group>";
@@ -123,6 +165,14 @@
 				AFFF1A1B20605F2700EF3E8D /* Info.plist */,
 			);
 			path = DelaShopUITests;
+			sourceTree = "<group>";
+		};
+		AFFF1A2720605F4700EF3E8D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF1A2C20605F9C00EF3E8D /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFF1A2D20605F9C00EF3E8D /* Extensions.swift in Sources */,
 				AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */,
 				AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */,
+				AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */,
+				AFFF1A2B20605F7D00EF3E8D /* WebViewController.swift in Sources */,
+				AF53A2BF20A11D3800CFBBE3 /* SocialNetViewController.swift in Sources */,
+				AFFF1A2920605F6100EF3E8D /* MainTabBarController.swift in Sources */,
+				AFDF507321C47C5F000275FD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
