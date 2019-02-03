@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F14CA7922065A49003C8D9D /* InstagramImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */; };
+		0F14CA7E22065E44003C8D9D /* InstagramData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F14CA7D22065E44003C8D9D /* InstagramData.swift */; };
 		AF53A2BF20A11D3800CFBBE3 /* SocialNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */; };
 		AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */; };
 		AFDF507321C47C5F000275FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF507221C47C5F000275FD /* Constants.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramImageFetcher.swift; sourceTree = "<group>"; };
+		0F14CA7D22065E44003C8D9D /* InstagramData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramData.swift; sourceTree = "<group>"; };
 		AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetViewController.swift; sourceTree = "<group>"; };
 		AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		AFDF507221C47C5F000275FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F14CA7C22065E24003C8D9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F14CA7D22065E44003C8D9D /* InstagramData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AFC776372069F1C500023DB2 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 		AFFF19F820605F2700EF3E8D /* DelaShop */ = {
 			isa = PBXGroup;
 			children = (
+				0F14CA7C22065E24003C8D9D /* Models */,
 				AFC776392069F1DC00023DB2 /* Appointments */,
 				AFC776382069F1CC00023DB2 /* Social Networks */,
 				AFC776372069F1C500023DB2 /* Gallery */,
@@ -145,6 +158,7 @@
 				AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */,
 				AFFF1A0520605F2700EF3E8D /* Info.plist */,
 				AFDF507221C47C5F000275FD /* Constants.swift */,
+				0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */,
 			);
 			path = DelaShop;
 			sourceTree = "<group>";
@@ -311,9 +325,11 @@
 			files = (
 				AFFF1A2D20605F9C00EF3E8D /* Extensions.swift in Sources */,
 				AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */,
+				0F14CA7922065A49003C8D9D /* InstagramImageFetcher.swift in Sources */,
 				AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */,
 				AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */,
 				AFFF1A2B20605F7D00EF3E8D /* WebViewController.swift in Sources */,
+				0F14CA7E22065E44003C8D9D /* InstagramData.swift in Sources */,
 				AF53A2BF20A11D3800CFBBE3 /* SocialNetViewController.swift in Sources */,
 				AFFF1A2920605F6100EF3E8D /* MainTabBarController.swift in Sources */,
 				AFDF507321C47C5F000275FD /* Constants.swift in Sources */,
