@@ -14,6 +14,10 @@ extension UIColor {
         
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
+    
+    class var backgroundColor: UIColor {
+        return UIColor.rgb(red: 46, green: 46, blue: 46)
+    }
 }
 
 extension UIView {
