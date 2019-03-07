@@ -21,21 +21,16 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func setupViewControllers() {
         //home
-        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_btn"), selectedImage: #imageLiteral(resourceName: "home_btn"))
+        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_btn"), selectedImage: #imageLiteral(resourceName: "home_btn"), rootViewController: HomeViewController())
         
         //appointments
-        let webNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "calendar_icon"), selectedImage: #imageLiteral(resourceName: "calendar_icon"), rootViewController: WebViewController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let webNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "calendar_icon_white"), selectedImage: #imageLiteral(resourceName: "calendar_icon_white"), rootViewController: WebViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         //gallery
-        let galleryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "photos_icon"), selectedImage: #imageLiteral(resourceName: "photos_icon-1"), rootViewController: GalleryViewController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let galleryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "photos_icon"), selectedImage: #imageLiteral(resourceName: "photos_icon"), rootViewController: GalleryViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         //social networks
-        let socialNetworkController = templateNavController(unselectedImage: #imageLiteral(resourceName: "social_icon"), selectedImage: #imageLiteral(resourceName: "social_icon"), rootViewController: SocialNetViewController(collectionViewLayout: UICollectionViewFlowLayout()))
-        
-        //let layout = UICollectionViewFlowLayout()
-        
-
-        
+        let socialNetworkController = templateNavController(unselectedImage: #imageLiteral(resourceName: "more_info_btn"), selectedImage: #imageLiteral(resourceName: "more_info_btn"), rootViewController: SocialNetViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         tabBar.tintColor = .black
         

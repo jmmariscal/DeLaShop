@@ -13,7 +13,7 @@
 		AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */; };
 		AFDF507321C47C5F000275FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF507221C47C5F000275FD /* Constants.swift */; };
 		AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19F920605F2700EF3E8D /* AppDelegate.swift */; };
-		AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19FB20605F2700EF3E8D /* ViewController.swift */; };
+		AFFF19FC20605F2700EF3E8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF19FB20605F2700EF3E8D /* HomeViewController.swift */; };
 		AFFF19FF20605F2700EF3E8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFF19FD20605F2700EF3E8D /* Main.storyboard */; };
 		AFFF1A0120605F2700EF3E8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFF1A0020605F2700EF3E8D /* Assets.xcassets */; };
 		AFFF1A0420605F2700EF3E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */; };
@@ -49,7 +49,7 @@
 		AFDF507221C47C5F000275FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFFF19F620605F2700EF3E8D /* DelaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF19F920605F2700EF3E8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFFF19FB20605F2700EF3E8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFFF19FB20605F2700EF3E8D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFFF19FE20605F2700EF3E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFFF1A0020605F2700EF3E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFFF1A0320605F2700EF3E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */,
+				0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -150,15 +151,13 @@
 				AFC776382069F1CC00023DB2 /* Social Networks */,
 				AFC776372069F1C500023DB2 /* Gallery */,
 				AFFF1A2720605F4700EF3E8D /* Utils */,
+				AFFF19FB20605F2700EF3E8D /* HomeViewController.swift */,
 				AFFF1A2820605F6100EF3E8D /* MainTabBarController.swift */,
 				AFFF19F920605F2700EF3E8D /* AppDelegate.swift */,
-				AFFF19FB20605F2700EF3E8D /* ViewController.swift */,
 				AFFF19FD20605F2700EF3E8D /* Main.storyboard */,
 				AFFF1A0020605F2700EF3E8D /* Assets.xcassets */,
 				AFFF1A0220605F2700EF3E8D /* LaunchScreen.storyboard */,
 				AFFF1A0520605F2700EF3E8D /* Info.plist */,
-				AFDF507221C47C5F000275FD /* Constants.swift */,
-				0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */,
 			);
 			path = DelaShop;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AFFF1A2C20605F9C00EF3E8D /* Extensions.swift */,
+				AFDF507221C47C5F000275FD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFFF1A2D20605F9C00EF3E8D /* Extensions.swift in Sources */,
-				AFFF19FC20605F2700EF3E8D /* ViewController.swift in Sources */,
+				AFFF19FC20605F2700EF3E8D /* HomeViewController.swift in Sources */,
 				0F14CA7922065A49003C8D9D /* InstagramImageFetcher.swift in Sources */,
 				AFFF19FA20605F2700EF3E8D /* AppDelegate.swift in Sources */,
 				AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */,

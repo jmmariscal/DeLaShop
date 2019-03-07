@@ -17,7 +17,7 @@ class InstagramImageFetcher {
         return URL(string: "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)")
     }
     
-    private let accessToken = "48092835.d551c49.d345ef364f264606a11c2ba3b66962bc"
+    private let accessToken = "53700905.8ad2960.2d8a0ae62185406fb34bf10cbeaea9aa"
     
     func getInstagramData(completion: @escaping (InstagramData?)->Void ) {
         guard let url = endpoint else { completion(nil); return}

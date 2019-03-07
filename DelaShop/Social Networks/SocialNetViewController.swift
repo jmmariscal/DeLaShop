@@ -12,9 +12,101 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assignBackground()
         navigationItem.title = "Social Networks"
-        
-        collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "barbershop"))
+        setupSocialButtons()
+        collectionView?.backgroundColor = .clear
         
     }
+    
+    func assignBackground() {
+        let background = UIImage(named: "barbershop")
+        
+        var imageView: UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
+    }
+    
+    let youTubeBtn: UIButton = {
+        let youTubeBtn = UIButton(type: .system)
+        youTubeBtn.addTarget(self, action: #selector(didTapYouTube), for: .touchUpInside)
+        youTubeBtn.setTitle("YouTube", for: .normal)
+        youTubeBtn.backgroundColor = .lightGray
+        youTubeBtn.layer.cornerRadius = 5
+        
+        return youTubeBtn
+    }()
+    
+    let twitterBtn: UIButton = {
+        let twitterBtn = UIButton(type: .system)
+        twitterBtn.addTarget(self, action: #selector(didTapTwitter), for: .touchUpInside)
+        twitterBtn.setTitle("Twitter", for: .normal)
+        twitterBtn.backgroundColor = .lightGray
+        twitterBtn.layer.cornerRadius = 5
+
+        return twitterBtn
+    }()
+    
+    let instagramBtn: UIButton = {
+        let instagramBtn = UIButton(type: .system)
+        instagramBtn.addTarget(self, action: #selector(didTapInstagram), for: .touchUpInside)
+        instagramBtn.setTitle("Instagram", for: .normal)
+        instagramBtn.backgroundColor = .lightGray
+        instagramBtn.layer.cornerRadius = 5
+
+        return instagramBtn
+    }()
+    
+    fileprivate func setupSocialButtons() {
+        let stackView = UIStackView(arrangedSubviews: [youTubeBtn, twitterBtn, instagramBtn])
+        
+        stackView.distribution = .fillEqually
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        
+        view.addSubview(stackView)
+        
+        stackView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 250, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 200, height: 250)
+    }
+    
+    @objc func didTapYouTube() {
+        let youtubeHooks = "youtube://user/ChrisFix"
+        let youtubeUrl = NSURL(string: youtubeHooks)
+        if UIApplication.shared.canOpenURL(youtubeUrl! as URL) {
+            UIApplication.shared.open(youtubeUrl! as URL, options: [:], completionHandler: nil)
+        } else {
+            //redirect to safari because the user doesn't have YouTube App
+            let youtubeWebUrl = NSURL(string: "http://www.youtube.com/")
+            UIApplication.shared.open(youtubeWebUrl! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @objc func didTapTwitter() {
+        let twitterHooks = "twitter://user?screen_name=Juan_Mariscal03"
+        let twitterUrl = NSURL(string: twitterHooks)
+        if UIApplication.shared.canOpenURL(twitterUrl! as URL) {
+            UIApplication.shared.open(twitterUrl! as URL, options: [:], completionHandler: nil)
+        } else {
+            let twitterWebUrl = NSURL(string: "http://www.twitter.com/Juan_Mariscal03")
+            UIApplication.shared.open(twitterWebUrl! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @objc func didTapInstagram() {
+        let instagramHooks = "instagram://user?username=jmmariscal"
+        let instagramUrl = NSURL(string: instagramHooks)
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+        } else {
+            let instagramWebUrl = NSURL(string: "http://www.instagram.com/")
+            UIApplication.shared.open(instagramWebUrl! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
 }

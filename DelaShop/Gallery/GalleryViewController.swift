@@ -14,6 +14,7 @@ class PhotoCell: UICollectionViewCell {
         let iv = UIImageView(frame: .zero)
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFit
+
         return iv
     }()
     
@@ -32,7 +33,7 @@ class PhotoCell: UICollectionViewCell {
     }
     
     func updateWith(image: Image) {
-        InstagramImageFetcher.shared.fetchImage(with: image.low_resolution.url) { (data) in
+        InstagramImageFetcher.shared.fetchImage(with: image.standard_resolution.url) { (data) in
             guard let data = data else { return }
             self.imageView.image = UIImage(data: data)
         }
@@ -57,8 +58,10 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
             self.iData = iData
         }
         
-        collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "barbershop"))
-        collectionView?.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 80, height: 100)
+        assignBackground()
+        
+        collectionView?.backgroundColor = .clear
+        collectionView?.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 150, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 80, height: 100)
 
         navigationItem.title = "Gallery"
         navigationController?.navigationBar.backgroundColor = .backgroundColor
@@ -66,6 +69,19 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
         
     }
     
+    func assignBackground() {
+        let background = UIImage(named: "barbershop")
+        
+        var imageView: UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
+    }
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return iData?.data.count ?? 0
     }
@@ -76,9 +92,26 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
         guard let image = iData?.data[indexPath.row].images else { return UICollectionViewCell() }
         
         cell?.updateWith(image: image)
-        cell?.backgroundColor = .white
+        cell?.backgroundColor = .black
         
         return cell ?? UICollectionViewCell()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? PhotoCell
+        
+        let image = iData?.data[indexPath.row].images
+        
+        cell?.updateWith(image: image!)
+        cell?.frame = self.view.frame
+        cell?.backgroundColor = .black
+        cell?.contentMode = .scaleAspectFit
+        cell?.isUserInteractionEnabled = true
+        
+        _ = UITapGestureRecognizer(target: self, action: #selector(dismissFullScreenImage))
+        
+        self.view.addSubview(cell!)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -90,7 +123,13 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let width = (view.frame.width - 2) / 3
         return CGSize(width: width, height: width)
     }
+    
+    @objc func dismissFullScreenImage(_ sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
+    }
+    
 }
