@@ -109,7 +109,9 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
         cell?.contentMode = .scaleAspectFit
         cell?.isUserInteractionEnabled = true
         
-        _ = UITapGestureRecognizer(target: self, action: #selector(dismissFullScreenImage))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissFullScreenImage))
+        
+        cell?.addGestureRecognizer(tapGesture)
         
         self.view.addSubview(cell!)
     }

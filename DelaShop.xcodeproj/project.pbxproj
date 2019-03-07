@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F14CA7922065A49003C8D9D /* InstagramImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */; };
 		0F14CA7E22065E44003C8D9D /* InstagramData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F14CA7D22065E44003C8D9D /* InstagramData.swift */; };
+		0F5F077C2230C5E5006D6138 /* SocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F077B2230C5E5006D6138 /* SocialButton.swift */; };
 		AF53A2BF20A11D3800CFBBE3 /* SocialNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */; };
 		AFBB4A95209FF6280086D4B8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */; };
 		AFDF507321C47C5F000275FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF507221C47C5F000275FD /* Constants.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0F14CA7822065A49003C8D9D /* InstagramImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramImageFetcher.swift; sourceTree = "<group>"; };
 		0F14CA7D22065E44003C8D9D /* InstagramData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramData.swift; sourceTree = "<group>"; };
+		0F5F077B2230C5E5006D6138 /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
 		AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetViewController.swift; sourceTree = "<group>"; };
 		AFBB4A94209FF6280086D4B8 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		AFDF507221C47C5F000275FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AF53A2BE20A11D3800CFBBE3 /* SocialNetViewController.swift */,
+				0F5F077B2230C5E5006D6138 /* SocialButton.swift */,
 			);
 			path = "Social Networks";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				0F14CA7E22065E44003C8D9D /* InstagramData.swift in Sources */,
 				AF53A2BF20A11D3800CFBBE3 /* SocialNetViewController.swift in Sources */,
 				AFFF1A2920605F6100EF3E8D /* MainTabBarController.swift in Sources */,
+				0F5F077C2230C5E5006D6138 /* SocialButton.swift in Sources */,
 				AFDF507321C47C5F000275FD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

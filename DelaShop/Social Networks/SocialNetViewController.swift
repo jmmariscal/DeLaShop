@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias Links = (hook: String, web: String)
+
 class SocialNetViewController:   UICollectionViewController, UICollectionViewDelegateFlowLayout{
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,32 +35,20 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
     }
     
     let youTubeBtn: UIButton = {
-        let youTubeBtn = UIButton(type: .system)
+        let youTubeBtn = SocialButton(title: "YouTube")
         youTubeBtn.addTarget(self, action: #selector(didTapYouTube), for: .touchUpInside)
-        youTubeBtn.setTitle("YouTube", for: .normal)
-        youTubeBtn.backgroundColor = .lightGray
-        youTubeBtn.layer.cornerRadius = 5
-        
         return youTubeBtn
     }()
     
     let twitterBtn: UIButton = {
-        let twitterBtn = UIButton(type: .system)
+        let twitterBtn = SocialButton(title: "Twitter")
         twitterBtn.addTarget(self, action: #selector(didTapTwitter), for: .touchUpInside)
-        twitterBtn.setTitle("Twitter", for: .normal)
-        twitterBtn.backgroundColor = .lightGray
-        twitterBtn.layer.cornerRadius = 5
-
         return twitterBtn
     }()
     
     let instagramBtn: UIButton = {
-        let instagramBtn = UIButton(type: .system)
+        let instagramBtn = SocialButton(title: "Instagram")
         instagramBtn.addTarget(self, action: #selector(didTapInstagram), for: .touchUpInside)
-        instagramBtn.setTitle("Instagram", for: .normal)
-        instagramBtn.backgroundColor = .lightGray
-        instagramBtn.layer.cornerRadius = 5
-
         return instagramBtn
     }()
     
@@ -75,38 +65,28 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
     }
     
     @objc func didTapYouTube() {
-        let youtubeHooks = "youtube://user/ChrisFix"
-        let youtubeUrl = NSURL(string: youtubeHooks)
-        if UIApplication.shared.canOpenURL(youtubeUrl! as URL) {
-            UIApplication.shared.open(youtubeUrl! as URL, options: [:], completionHandler: nil)
-        } else {
-            //redirect to safari because the user doesn't have YouTube App
-            let youtubeWebUrl = NSURL(string: "http://www.youtube.com/")
-            UIApplication.shared.open(youtubeWebUrl! as URL, options: [:], completionHandler: nil)
-        }
+        let links: Links = ("youtube://user/ChrisFix",
+                            "http://www.youtube.com/")
+        open(socialTo: links)
     }
     
     @objc func didTapTwitter() {
-        let twitterHooks = "twitter://user?screen_name=Juan_Mariscal03"
-        let twitterUrl = NSURL(string: twitterHooks)
-        if UIApplication.shared.canOpenURL(twitterUrl! as URL) {
-            UIApplication.shared.open(twitterUrl! as URL, options: [:], completionHandler: nil)
-        } else {
-            let twitterWebUrl = NSURL(string: "http://www.twitter.com/Juan_Mariscal03")
-            UIApplication.shared.open(twitterWebUrl! as URL, options: [:], completionHandler: nil)
-        }
+        let links: Links = ("twitter://user?screen_name=Juan_Mariscal03",
+                            "http://www.twitter.com/Juan_Mariscal03")
+        open(socialTo: links)
     }
     
     @objc func didTapInstagram() {
-        let instagramHooks = "instagram://user?username=jmmariscal"
-        let instagramUrl = NSURL(string: instagramHooks)
-        if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
-            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
-        } else {
-            let instagramWebUrl = NSURL(string: "http://www.instagram.com/")
-            UIApplication.shared.open(instagramWebUrl! as URL, options: [:], completionHandler: nil)
-        }
+        let links: Links = ("instagram://user?username=jmmariscal",
+                            "http://www.instagram.com/")
+        open(socialTo: links)
     }
     
-    
+    private func open(socialTo links: Links) {
+        if let url = URL(string: links.hook), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else if let url = URL(string: links.web) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
