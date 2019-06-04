@@ -14,25 +14,32 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         self.delegate = self
         
+        UINavigationBar.appearance().barTintColor = .black
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
 
-        
+
+
         setupViewControllers()
     }
     
+    
+    
     func setupViewControllers() {
         //home
-        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_btn"), selectedImage: #imageLiteral(resourceName: "home_btn"), rootViewController: HomeViewController())
+        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "profile"), selectedImage: #imageLiteral(resourceName: "profile"), rootViewController: HomeViewController())
         
         //appointments
-        let webNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "calendar_icon_white"), selectedImage: #imageLiteral(resourceName: "calendar_icon_white"), rootViewController: WebViewController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let webNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "cart"), selectedImage: #imageLiteral(resourceName: "cart"), rootViewController: WebViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         //gallery
-        let galleryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "photos_icon"), selectedImage: #imageLiteral(resourceName: "photos_icon"), rootViewController: GalleryViewController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let galleryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "photo_btn"), selectedImage: #imageLiteral(resourceName: "photo_btn"), rootViewController: GalleryViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         //social networks
         let socialNetworkController = templateNavController(unselectedImage: #imageLiteral(resourceName: "more_info_btn"), selectedImage: #imageLiteral(resourceName: "more_info_btn"), rootViewController: SocialNetViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
-        tabBar.tintColor = .black
+        tabBar.tintColor = .white
+        tabBar.barTintColor = .black
         
         viewControllers = [homeNavController, webNavController, galleryNavController, socialNetworkController]
         

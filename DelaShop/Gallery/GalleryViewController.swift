@@ -33,7 +33,7 @@ class PhotoCell: UICollectionViewCell {
     }
     
     func updateWith(image: Image) {
-        InstagramImageFetcher.shared.fetchImage(with: image.standard_resolution.url) { (data) in
+        InstagramImageFetcher.shared.fetchImage(with: image.low_resolution.url) { (data) in
             guard let data = data else { return }
             self.imageView.image = UIImage(data: data)
         }
@@ -59,9 +59,10 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
         }
         
         assignBackground()
+        setupLogoLabel()
         
         collectionView?.backgroundColor = .clear
-        collectionView?.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 150, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 80, height: 100)
+        collectionView?.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 80, height: 100)
 
         navigationItem.title = "Gallery"
         navigationController?.navigationBar.backgroundColor = .backgroundColor
@@ -70,7 +71,7 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     func assignBackground() {
-        let background = UIImage(named: "barbershop")
+        let background = UIImage(named: "Haircut")
         
         var imageView: UIImageView!
         imageView = UIImageView(frame: view.bounds)
@@ -81,6 +82,24 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
     }
+    
+    private func setupLogoLabel() {
+        let logo = logoLabel
+        
+        view.addSubview(logo)
+        logo.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 50, paddingBottom: 0, paddingRight: 50, width: 300, height: 100)
+    }
+    
+    let logoLabel: UILabel = {
+        let logo = UILabel()
+        logo.text = "DeLa Shop"
+        logo.textColor = .white
+        logo.textAlignment = .center
+        logo.font = UIFont.boldSystemFont(ofSize: 50)
+        
+        
+        return logo
+    }()
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return iData?.data.count ?? 0
@@ -104,12 +123,13 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
         let image = iData?.data[indexPath.row].images
         
         cell?.updateWith(image: image!)
-        cell?.frame = self.view.frame
+        cell?.frame = UIScreen.main.bounds
         cell?.backgroundColor = .black
-        cell?.contentMode = .scaleAspectFit
+        cell?.contentMode = .center
         cell?.isUserInteractionEnabled = true
         
-        _ = UITapGestureRecognizer(target: self, action: #selector(dismissFullScreenImage))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissFullScreenImage))
+        cell?.addGestureRecognizer(tapGesture)
         
         self.view.addSubview(cell!)
     }

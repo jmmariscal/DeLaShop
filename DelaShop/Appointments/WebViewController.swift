@@ -15,10 +15,10 @@ class WebViewController: UICollectionViewController, UICollectionViewDelegateFlo
         
         collectionView?.backgroundColor = .white
         
-        navigationItem.title = "Appointments"
+        navigationItem.title = "Shop"
         
         view.addSubview(webView)
-        webView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 64, paddingLeft: 0, paddingBottom: -140, paddingRight: 0, width: 200, height: 90)
+        webView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: -140, paddingRight: 0, width: 200, height: 90)
         
         setupButtons()
         
@@ -26,17 +26,29 @@ class WebViewController: UICollectionViewController, UICollectionViewDelegateFlo
         webView.delegate = self as? UIWebViewDelegate
     }
     
+    
+    fileprivate func setupButtons() {
+        let stackView = UIStackView(arrangedSubviews: [refreshBtn, backBtn, forwardBtn])
+        
+        stackView.distribution = .fillEqually
+        stackView.axis = .horizontal
+        stackView.spacing = 4
+        
+        view.addSubview(stackView)
+        
+        stackView.anchor(top: webView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: -87, paddingRight: 0, width: 200, height: 30)
+    }
+    
     let webView:UIWebView = {
         let webView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        webView.loadRequest(NSURLRequest(url: NSURL(string: "https://www.genbook.com/bookings/slot/reservation/30381985?category=2430559618")! as URL) as URLRequest)
+        webView.loadRequest(NSURLRequest(url: NSURL(string: "https://www.beardbrand.com")! as URL) as URLRequest)
         
         return webView
     }()
     
     let backBtn: UIButton = {
         let backBtn = UIButton(type: .system)
-        backBtn.setImage(#imageLiteral(resourceName: "back_button"), for: .normal)
-        
+        backBtn.setImage(#imageLiteral(resourceName: "back_btn_light"), for: .normal)
         backBtn.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
         
         return backBtn
@@ -44,29 +56,29 @@ class WebViewController: UICollectionViewController, UICollectionViewDelegateFlo
     
     let forwardBtn: UIButton = {
         let forwardBtn = UIButton(type: .system)
-        forwardBtn.setImage(#imageLiteral(resourceName: "forward_button"), for: .normal)
+        forwardBtn.setImage(#imageLiteral(resourceName: "forward_btn_light copy"), for: .normal)
         
         forwardBtn.addTarget(self, action: #selector(handleForward), for: .touchUpInside)
         
         return forwardBtn
     }()
     
-    fileprivate func setupButtons() {
-        let stackView = UIStackView(arrangedSubviews: [backBtn, forwardBtn])
+    let refreshBtn: UIButton = {
+       let reBtn = UIButton(type: .system)
+        reBtn.setImage(#imageLiteral(resourceName: "repeat_btn"), for: .normal)
+        reBtn.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         
-        stackView.distribution = .fillEqually
-        stackView.axis = .horizontal
-        stackView.spacing = 5
-        
-        view.addSubview(stackView)
-        
-        stackView.anchor(top: webView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: -87, paddingRight: 0, width: 200, height: 30)
-    }
+        return reBtn
+    }()
     
     @objc func handleBack() {
         if webView.canGoBack {
             webView.goBack()
         }
+    }
+    
+    @objc func handleRefresh() {
+        webView.reload()
     }
     
     @objc func handleForward() {

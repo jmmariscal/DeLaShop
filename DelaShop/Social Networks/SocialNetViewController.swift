@@ -20,7 +20,7 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
     }
     
     func assignBackground() {
-        let background = UIImage(named: "barbershop")
+        let background = UIImage(named: "Haircut")
         
         var imageView: UIImageView!
         imageView = UIImageView(frame: view.bounds)
@@ -36,7 +36,8 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
         let youTubeBtn = UIButton(type: .system)
         youTubeBtn.addTarget(self, action: #selector(didTapYouTube), for: .touchUpInside)
         youTubeBtn.setTitle("YouTube", for: .normal)
-        youTubeBtn.backgroundColor = .lightGray
+        youTubeBtn.setTitleColor(.white, for: .normal)
+        youTubeBtn.backgroundColor = .darkGray
         youTubeBtn.layer.cornerRadius = 5
         
         return youTubeBtn
@@ -46,7 +47,8 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
         let twitterBtn = UIButton(type: .system)
         twitterBtn.addTarget(self, action: #selector(didTapTwitter), for: .touchUpInside)
         twitterBtn.setTitle("Twitter", for: .normal)
-        twitterBtn.backgroundColor = .lightGray
+        twitterBtn.setTitleColor(.white, for: .normal)
+        twitterBtn.backgroundColor = .darkGray
         twitterBtn.layer.cornerRadius = 5
 
         return twitterBtn
@@ -56,7 +58,8 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
         let instagramBtn = UIButton(type: .system)
         instagramBtn.addTarget(self, action: #selector(didTapInstagram), for: .touchUpInside)
         instagramBtn.setTitle("Instagram", for: .normal)
-        instagramBtn.backgroundColor = .lightGray
+        instagramBtn.setTitleColor(.white, for: .normal)
+        instagramBtn.backgroundColor = .darkGray
         instagramBtn.layer.cornerRadius = 5
 
         return instagramBtn
@@ -71,7 +74,12 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
         
         view.addSubview(stackView)
         
-        stackView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 250, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 200, height: 250)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        stackView.heightAnchor.constraint(equalToConstant: 190).isActive = true
+        //stackView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 295, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 200, height: 210)
     }
     
     @objc func didTapYouTube() {
@@ -98,7 +106,7 @@ class SocialNetViewController:   UICollectionViewController, UICollectionViewDel
     }
     
     @objc func didTapInstagram() {
-        let instagramHooks = "instagram://user?username=jmmariscal"
+        let instagramHooks = "instagram://user?username=the.goodbarber"
         let instagramUrl = NSURL(string: instagramHooks)
         if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
             UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
